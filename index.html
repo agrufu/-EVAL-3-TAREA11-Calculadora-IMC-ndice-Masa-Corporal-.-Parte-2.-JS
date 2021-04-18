@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de IMC</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cálculo del IMC</h1>
+        <h3>Aplicación para calcular el Índice de Masa Corporal de una persona.</h3>
+    </header>
+    <main>
+        <article>
+            <title>Formulario de toma de datos</title>
+            <p>El <b>índice de masa corporal</b> (<b>IMC</b>) es una razón matemática que asocia la <b>masa</b> y la
+                <b>talla</b> de un individuo,
+                ideada por el estadístico belga <b>Adolphe Quetelet</b>, por lo que también se conoce como <b>Índice de
+                    Quetelet</b>.
+            </p>
+            <p>El <b>IMC</b> también puede calcularse a partir de tablas o gráficas que muestran el IMC en función de la
+                masa y la estatura usando líneas de contorno para distintas categorías. El IMC es un criterio ampliamente
+                aceptado pero no es exacto. Clasifica a las personas en <b>infrapeso</b>, <b>peso normal</b>, <b>sobrepeso</b>
+                 y <b>obesidad</b>, basándose exclusivamente en la masa del individuo y su altura. No tendría en cuenta la
+                 edad, el sexo, el porcentaje de grasa corporal o la masa muscular. Incluso la categorización aún hoy es
+                 objeto de debate sobre dónde se deberían colocar esos límites. Se acepta comúnmente los siguientes límites:
+            <ul>
+                <li><b>infrapeso</b> por debajo de 18,5 kg/m²</li>
+                <li><b>peso normal</b> de 18,5 a 25 kg/m²</li>
+                <li><b>sobrepeso</b> de 25 a 30 kg/m²</li>
+                <li><b>obesidad</b> más de 30 kg/m²</li>
+            </ul>
+            El IMC por debajo de 20 y sobre 25 ha sido asociado con mayor probabilidad de mortalidad, disminuyendo el
+            riesgo entre 20-25.
+            La prevalencia de sobrepeso y obesidad es mayor en América y menor en el Sureste Asiático, y es del doble en
+            países con ingresos medios
+            y altos que en países con ingresos bajos o muy bajos.
+            </p>
+            <p>Se calcula según la operación:</p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1b9f4caa253a635dd7dbaabcb2f0e622d96055ba" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.171ex; width:18.958ex; height:5.009ex;" alt="{\displaystyle {\mbox{IMC}}={\frac {\mbox{masa}}{{\mbox{estatura}}^{2}}"/>
+            <p>dónde la masa se expresa en <b>kilogramos</b> y el <b>cuadrado de la estatura</b> en <b>metros al cuadrado</b>, siendo la unidad de medida del IMC en el <b>Sistema MKS</b> o en el <b>Sistema Internacional de Unidades</b>:</p>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d1c538c5d2b613fb3320978140e7ce732c7ee398" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:18.626ex; height:3.176ex;" alt="{\displaystyle {\mbox{kg}}\cdot {\mbox{m}}^{-2}={\mbox{kg}}/{\mbox{m}}^{2}}"/>
+            <form name="calculoIMC" id="calculoIMC" action="">
+                <ul>
+                    <li>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="nombre">
+                    </li>
+                    <li>
+                        <label for="edad">Edad: </label>
+                        <input type="text" id="edad" name="edad">
+                    </li>
+                    <li>
+                        <label for="peso">Peso(Kg): </label>
+                        <input type="text" id="peso" name="peso">
+                    </li>
+                    <li>
+                        <label for="altura">Altura(cm): </label>
+                        <input type="text" id="altura" name="altura">
+                    </li>
+                    <br>
+                    <input type="button" id="calcular" value="Calcular" onclick="calcularIMC()">
+                </ul>
+                <ul>
+                    <textarea id="resultado" name="resultado" cols="38" rows="10" wrap="hard">Aquí irá el resultado...</textarea>
+                </ul>
+            </form>
+        </article>
+    </main>
+    <footer>Designed by @grufu€studios&#8482; - 2021</footer>
+    <script src="/js/calculo_imc.js"></script>
+</body>
+
+</html>
